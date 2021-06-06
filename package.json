@@ -1,0 +1,36 @@
+{
+  "name": "pathfinding-visualizer",
+  "version": "1.0.0",
+  "description": "a visualizer for path finding",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpan5/Pathfinding-Visualizer.git"
+  },
+  "author": "Huijie Pan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hpan5/Pathfinding-Visualizer/issues"
+  },
+  "homepage": "https://github.com/hpan5/Pathfinding-Visualizer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack-dev-server": "^3.9.0",
+    "react-hot-loader": "^4.3.11"
+  }
+}
