@@ -1,35 +1,32 @@
-
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
-  },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
-  output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
-  },
-  devServer: {
-    contentBase: path.join(__dirname, "public/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
-};
+  // Where files should be sent once they are bundled
+ output: {
+   path: path.join(__dirname, '/dist'),
+   filename: 'index.bundle.js'
+ },
+  // webpack 5 comes with devServer which loads in development mode
+ devServer: {
+   port: 3000,
+   watchContentBase: true
+ },
+  // Rules of how webpack will take our files, complie & bundle them for the browser 
+ module: {
+   rules: [
+     {
+       test: /\.(js|jsx)$/,
+       exclude: /nodeModules/,
+       use: {
+         loader: 'babel-loader'
+       }
+     },
+     {
+       test: /\.css$/,
+       use: ['style-loader', 'css-loader']
+     }
+   ]
+ },
+ plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
+}

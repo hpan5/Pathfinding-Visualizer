@@ -1,12 +1,9 @@
-import React form "React";
-import "./App.css";
+import React from "react"
 
-function App(props) {
-    return (
-        <div className="App">
-            <h1> Hello, World! </h1>
-        </div>
-    )
+function App() {
+    return (<div>
+        <h1>Doris's very first pathfinding visualizer</h1>
+    </div>)
 }
 
-export default App;
+export default App
