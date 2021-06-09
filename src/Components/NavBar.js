@@ -20,8 +20,9 @@ const NavBar = () => {
             <Toolbar>
                 <Button color="inherit">Algorithms</Button>
                 <Button color="inherit">Clear Path</Button>
-                <Button color="inherit">Speed: Fast</Button>
+                <Button color="inherit">Speed</Button>
                 <Button color="inherit">Visualize</Button>
+                <Button color="inherit">Randomize bomb Node</Button>
             </Toolbar>
         </AppBar>
     )
